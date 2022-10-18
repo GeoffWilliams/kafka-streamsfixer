@@ -48,8 +48,6 @@ public class Main {
         final Serde<JsonNode> e2eSerde = Serdes.serdeFrom(end2EndSerializer, end2EndDeserializer);
 
 
-
-
         // re-value stuffs
         StreamsBuilder builder = new StreamsBuilder();
         builder.stream(topic, Consumed.with(Serdes.String(), e2eSerde))
